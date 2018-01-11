@@ -3,6 +3,8 @@ package com.iesemilidarder.fordummies.core;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.List;
+
 /**
  * dummies
  * com.iesemilidarder.fordummies.core
@@ -27,6 +29,10 @@ public abstract class DBObject implements IDatabaseActions {
     }
     public void update(){
         log.error("Not implemented yet");
+    }
+
+    public List<DBObject> getAll() {
+        return null;
     }
 
     /**

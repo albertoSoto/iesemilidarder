@@ -1,5 +1,7 @@
 package com.iesemilidarder.fordummies.core;
 
+import java.util.List;
+
 /**
  * dummies
  * com.iesemilidarder.fordummies.core
@@ -10,4 +12,5 @@ public interface IDatabaseActions {
     public void save();
     public void delete();
     public void update();
+    public List<DBObject> getAll();
 }
