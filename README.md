@@ -4,6 +4,8 @@ This project has aim of teaching professional concepts into official studies, as
 
 It's build over web microframework with spark java (http://sparkjava.com/), over Maven dependencies (http://maven.apache.org/) in a multimodule approach with java 1.8, securized with spring Security 5.
 
+Will be dockerized, and balanced through Kubernetes into an openshift backend as part of Computer Admininistration concepts. 
+
 Introduces several concepts, like:
 
 - Interfaces
