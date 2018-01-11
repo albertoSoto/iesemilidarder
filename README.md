@@ -16,7 +16,7 @@ Introduces several concepts, like:
 - Multimodule aproach
 - SparkJava
 
-#Frontend concepts: dummyweb module
+## Frontend concepts: dummyweb module
 
 - Configures spark to be rendered with freemarker properly, using the resources as it should be, exposing static files if needed
 - Includes Bootstrap and Jquery via CDN
@@ -24,7 +24,7 @@ Introduces several concepts, like:
 - Will include Spring Security
 - Ambiguous response depending on http headers, same page can be answered as html or as api Rest
 
-#Business layer concepts: dummycore module
+## Business layer concepts: dummycore module
 - Integrates logging
 - Basic interface concepts
 Abstract class that implements part of an interface to generalize Business objects
