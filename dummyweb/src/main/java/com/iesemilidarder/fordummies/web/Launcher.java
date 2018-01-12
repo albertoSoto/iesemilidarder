@@ -1,9 +1,9 @@
 package com.iesemilidarder.fordummies.web;
 
+import com.deicos.scrapping.jsoup.ScrappingCommand;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.iesemilidarder.fordummies.core.DBObject;
 import com.iesemilidarder.fordummies.core.User;
-import freemarker.cache.ClassTemplateLoader;
 import freemarker.template.Configuration;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -13,16 +13,12 @@ import spark.Request;
 import spark.Response;
 import spark.template.freemarker.FreeMarkerEngine;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static spark.Spark.get;
-import static spark.Spark.port;
-import static spark.Spark.staticFiles;
+import static spark.Spark.*;
 
 /**
  * dummies
@@ -111,11 +107,25 @@ public class Launcher {
                         new ModelAndView(model, "basicView.ftl")
                 );
             } else {
+                CorsFilter.apply();
                 ObjectMapper mapper = new ObjectMapper();
                 setResponseHeader(response, false);
                 return mapper.writeValueAsString(lUser);
             }
         });
+        /*get("/scrap",(request,response)->{
+            Map<String, Object> model = new HashMap<>();
+            String query = ".center-content";
+            String url = "https://www.meneame.net/";
+            ScrappingCommand cmd = new ScrappingCommand(url, query);
+            model.put("title", "Scrapping");
+            model.put("url", url);
+            model.put("element", query);
+            model.put("content", cmd.getResult());
+            return getFreemarkerEngine().render(
+                    new ModelAndView(model, "scrapView.ftl")
+            );
+        });*/
     }
 
 }

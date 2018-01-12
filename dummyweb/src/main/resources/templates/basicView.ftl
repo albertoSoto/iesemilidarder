@@ -53,7 +53,6 @@
                     </div>
                 </div>
             </div>
-
         </#list>
     </div>
 </#if>
