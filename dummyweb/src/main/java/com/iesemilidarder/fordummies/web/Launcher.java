@@ -1,6 +1,5 @@
 package com.iesemilidarder.fordummies.web;
 
-import com.deicos.scrapping.jsoup.ScrappingCommand;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.iesemilidarder.fordummies.core.DBObject;
 import com.iesemilidarder.fordummies.core.User;
